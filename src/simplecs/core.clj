@@ -34,3 +34,10 @@
   "Get all entities in a data store. Might be useful for something...?"
   [data-store]
   (:entities data-store))
+
+; COMPONENTS
+
+(defn create-component
+  "Create a component, given an entity and a map of properties."
+  [entity properties]
+  (assoc properties :entity entity))
