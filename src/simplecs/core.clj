@@ -16,3 +16,9 @@
   [entity data-store]
   (let [new-entities (union (:entities data-store) entity)]
     (assoc data-store :entities new-entities)))
+
+(defn delete-entity
+  "Remove an entity from a data store, and return the new data store."
+  [entity data-store]
+  (let [new-entities (disjoin (:entities data-store) entity)]
+    (assoc data-store :entities new-entities)))
