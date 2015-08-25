@@ -1,10 +1,14 @@
 (ns simplecs.core)
 
+; DATA STORES
+
 (defn create-data-store
   "Create a new data store."
   []
   {:entities #{}  ; entities should be unique
    :components []})  ; tada! that's it. that's all you get.
+
+; ENTITIES
 
 (defn create-entity
   "Create a new entity - i.e., a UUID."
