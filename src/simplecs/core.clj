@@ -1,6 +1,7 @@
 (ns simplecs.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn create-data-store
+  "Create a new data store."
+  []
+  {:entities []
+   :components []})  ; tada! that's it. that's all you get.
