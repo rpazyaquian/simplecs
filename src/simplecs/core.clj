@@ -41,3 +41,9 @@
   "Create a component, given an entity and a map of properties."
   [entity properties]
   (assoc properties :entity entity))
+
+(defn add-component
+  "Add a component to a data store, and return the new data store."
+  [component data-store]
+  (let [new-components (conj (:components data-store) component)]
+    (assoc data-store :components new-components)))
