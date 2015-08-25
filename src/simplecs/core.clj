@@ -22,3 +22,11 @@
   [entity data-store]
   (let [new-entities (disjoin (:entities data-store) entity)]
     (assoc data-store :entities new-entities)))
+
+; there's no real reason to query the data store for a specific entity.
+; the only thing you can use to get such an entity is its UUID - which is the entity itself!
+
+(defn get-all-entities
+  "Get all entities in a data store. Might be useful for something...?"
+  [data-store]
+  (:entities data-store))
