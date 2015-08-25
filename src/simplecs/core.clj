@@ -54,3 +54,11 @@
   (let [components (:components data-store)
         new-components (remove (= % component) components)]
     (assoc data-store :components new-components)))
+
+; QUERIES
+
+(defn find-components
+  "Find all components that match a given predicate."
+  [predicate data-store]
+  (let [components (:components data-store)]
+    (filter predicate components)))
