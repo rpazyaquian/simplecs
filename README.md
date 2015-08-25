@@ -48,6 +48,28 @@ TODO: Add example.
 
 TODO: Add example.
 
+## Why is this so barebones?
+
+Changes in game state is ultimately a function of about three different things:
+
+1. The current game state
+2. The current input signals
+3. The amount of time since the last game state (time delta)
+
+Boiling down game dev to this basic rule means that your data structures and algorithms are relatively simple and require little complexity. All you need is a data structure and a few functions, and you're golden. That's Simplecs - the data structure and functions.
+
+Simplecs is not a game engine. Simplecs is a specification for managing entities and components. It cannot make assumptions about *how* it is going to be used, and therefore, it is just a building block.
+
+## What *should* this library do?
+
+The most complicated things in ECS architectures are:
+
+- How do I get the components I want?
+- What order do I run systems in?
+- Should components affect other components, and if so, how?
+
+I would love a library or engine that answers these questions for me. I haven't found one that satisfies me, however, and I still don't have the perfect answers to these questions. I'll have to think about what I want this library to do, ultimately.
+
 ## License
 
 Copyright © 2015 Rebecca Paz
