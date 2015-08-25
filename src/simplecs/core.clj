@@ -49,7 +49,7 @@
     (assoc data-store :components new-components)))
 
 (defn delete-component
-  "Removes a given component from a data store, and return the new data store."
+  "Remove a given component from a data store, and return the new data store."
   [component data-store]
   (let [components (:components data-store)
         new-components (remove (= % component) components)]
