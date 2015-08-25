@@ -1,6 +1,6 @@
 # simplecs
 
-A simple entity-component system (ECS) library.
+A simple entity-component system (ECS) library. There's data stores, entities, and components. Enjoy.
 
 ## Rationale
 
@@ -8,7 +8,7 @@ The entity-component system (ECS) architecture makes game development significan
 
 So far, this library handles entities and components. It doesn't say anything about systems, so it doesn't actually do much. It remains to be seen how opinionated this library is about how systems should be implemented, how advanced entity management should be handled, etc. Therefore, this library will change in the future.
 
-This library was created in order to isolate and provide a simple pluggable implementation of the absolute very basics of an entity component system. There's entities, and there's components. Enjoy.
+This library was created in order to isolate and provide a simple pluggable implementation of the absolute very basics of an entity component system. (More informally, this library was created so that I don't have to build an ECS architecture from scratch every single time I want to make a game.)
 
 ## How do I...
 
