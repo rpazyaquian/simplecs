@@ -3,7 +3,7 @@
 (defn create-data-store
   "Create a new data store."
   []
-  {:entities []
+  {:entities #{}  ; entities should be unique
    :components []})  ; tada! that's it. that's all you get.
 
 (defn create-entity
@@ -14,5 +14,5 @@
 (defn add-entity
   "Add an entity to a data store, and return the new data store."
   [entity data-store]
-  (let [new-entities (conj (:entities data-store) entity)]
+  (let [new-entities (union (:entities data-store) entity)]
     (assoc data-store :entities new-entities)))
